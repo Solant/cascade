@@ -27,7 +27,8 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 
 SOURCES += \
-        tst_testtest.cpp 
+        tst_testtest.cpp \
+	../src/*
 
 DEFINES += SRCDIR=\\\"$$PWD/\\\"
 

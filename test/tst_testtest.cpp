@@ -1,6 +1,6 @@
 #include <QString>
 #include <QtTest>
-#include "../cascade.h"
+#include "../src/cascade.h"
 #include "plaingadget.h"
 
 class TestTest : public QObject
