@@ -6,6 +6,7 @@ before_install:
  - sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 1397BC53640DB551
  - sudo add-apt-repository --yes ppa:ubuntu-toolchain-r/test
  - sudo add-apt-repository --yes ppa:beineri/opt-qt571-trusty
+ - sudo apt-get update
  - sudo apt-get install -qq build-essential qt57-meta qt57base qt57qbs
 
 script:
