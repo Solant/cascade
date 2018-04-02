@@ -3,8 +3,12 @@ dist: trusty
 language: cpp
 
 before_install:
- - sudo apt-get update -qq
- - sudo apt-get install -qq qt5-default
+ - sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 1397BC53640DB551
+ - sudo add-apt-repository --yes ppa:ubuntu-toolchain-r/test
+ - sudo add-apt-repository --yes ppa:beineri/opt-qt57-trusty
+ - sudo apt-get install -qq g++-6 qt57-meta-full
 
 script:
+ - QT_ENV_SCRIPT=$(find /opt -name 'qt*-env.sh')
+ - source $QT_ENV_SCRIPT
  - cd test && qmake && make && ./tst_testtest
