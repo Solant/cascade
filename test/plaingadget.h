@@ -13,7 +13,7 @@ class PlainGadget {
 
 public:
     int propInt = 0;
-    QString propString = 0;
+    QString propString;
     bool propBool = 0;
     QList<int> intList;
 };
