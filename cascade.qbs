@@ -9,6 +9,9 @@ DynamicLibrary {
     cpp.cxxLanguageVersion: "c++11"
     bundle.isBundle: false
     cpp.visibility: "minimal"
+    cpp.defines: [
+        "CASCADE_LIBRARY"
+    ]
     files: [
         "src/cascade.cpp",
         "src/cascade.h",
