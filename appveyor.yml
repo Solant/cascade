@@ -1,0 +1,19 @@
+clone_depth: 200
+
+environment:
+  matrix:
+    - QTDIR: C:\Qt\5.10.1\msvc2013_64
+    - QTDIR: C:\Qt\5.10.1\mingw53_32
+      MINGW: C:\Qt\Tools\mingw530_32
+    - QTDIR: C:\Qt\5.6\mingw49_32
+      MINGW: C:\Qt\Tools\mingw492_32
+
+configuration: Release
+
+install:
+  - choco install -y qbs --version 1.10.1
+
+build_script:
+  - qbs build
+  - cd test
+  - qbs run
