@@ -39,4 +39,4 @@ Makefile*
 CMakeLists.txt.user*
 
 # QBS
-/default
+default

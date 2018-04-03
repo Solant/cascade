@@ -1,6 +1,7 @@
 import qbs
 
 DynamicLibrary {
+    name: "cascade"
     Depends {
         name: "Qt"
         submodules: ["core"]
