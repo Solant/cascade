@@ -1,5 +1,5 @@
+#include <QDebug>
 #include "cascade.h"
-
 
 Cascade::Cascade()
 {
@@ -12,6 +12,13 @@ void Cascade::from(void *target, const QJsonObject &obj, const QMetaObject &targ
         const auto prop = targetMetaObject.property(i);
         const auto name = prop.name();
         if (obj.contains(name)) {
+            const QJsonValue value = obj.value(name);
+            if (
+                value.isArray()
+                || value.isObject()
+            ) {
+                qWarning() << "Nested object deserialization is not supported";
+            }
             prop.writeOnGadget(target, obj.value(name).toVariant());
         }
     }
