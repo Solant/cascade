@@ -1,5 +1,7 @@
 # cascade
 <a href="https://travis-ci.org/Solant/cascade"><img src="https://travis-ci.org/Solant/cascade.svg?branch=master" alt="Build Status"></a>
+<img src="https://ci.appveyor.com/api/projects/status/692i7dilpws4tfhn/branch/master?svg=true" alt="Build Status">
+
 
 Cascade is library for serialization and deserialization of QObjects and Gadgets.
 
